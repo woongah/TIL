@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbPort = new System.Windows.Forms.ComboBox();
             this.trackX = new System.Windows.Forms.TrackBar();
             this.lblX = new System.Windows.Forms.Label();
             this.btnConnect = new System.Windows.Forms.Button();
@@ -46,23 +45,22 @@
             this.btnLoadRecipe = new System.Windows.Forms.Button();
             this.txtLog = new System.Windows.Forms.TextBox();
             this.btnExportCsv = new System.Windows.Forms.Button();
+            this.lblTemperature = new System.Windows.Forms.Label();
+            this.lblLight = new System.Windows.Forms.Label();
+            this.lblDistance = new System.Windows.Forms.Label();
+            this.lblHumidity = new System.Windows.Forms.Label();
+            this.lblSwitchStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackZ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCamera)).BeginInit();
             this.SuspendLayout();
             // 
-            // cmbPort
-            // 
-            this.cmbPort.FormattingEnabled = true;
-            this.cmbPort.Location = new System.Drawing.Point(111, 129);
-            this.cmbPort.Name = "cmbPort";
-            this.cmbPort.Size = new System.Drawing.Size(121, 23);
-            this.cmbPort.TabIndex = 0;
-            // 
             // trackX
             // 
-            this.trackX.Location = new System.Drawing.Point(111, 177);
+            this.trackX.Location = new System.Drawing.Point(1117, 799);
+            this.trackX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.trackX.Maximum = 180;
             this.trackX.Name = "trackX";
             this.trackX.Size = new System.Drawing.Size(104, 56);
             this.trackX.TabIndex = 1;
@@ -71,7 +69,7 @@
             // lblX
             // 
             this.lblX.AutoSize = true;
-            this.lblX.Location = new System.Drawing.Point(127, 236);
+            this.lblX.Location = new System.Drawing.Point(1166, 716);
             this.lblX.Name = "lblX";
             this.lblX.Size = new System.Drawing.Size(30, 15);
             this.lblX.TabIndex = 2;
@@ -79,7 +77,8 @@
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(289, 128);
+            this.btnConnect.Location = new System.Drawing.Point(30, 654);
+            this.btnConnect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(174, 24);
             this.btnConnect.TabIndex = 3;
@@ -89,7 +88,8 @@
             // 
             // btnEmergency
             // 
-            this.btnEmergency.Location = new System.Drawing.Point(516, 129);
+            this.btnEmergency.Location = new System.Drawing.Point(30, 760);
+            this.btnEmergency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEmergency.Name = "btnEmergency";
             this.btnEmergency.Size = new System.Drawing.Size(193, 24);
             this.btnEmergency.TabIndex = 5;
@@ -99,7 +99,9 @@
             // 
             // trackY
             // 
-            this.trackY.Location = new System.Drawing.Point(248, 177);
+            this.trackY.Location = new System.Drawing.Point(1169, 832);
+            this.trackY.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.trackY.Maximum = 180;
             this.trackY.Name = "trackY";
             this.trackY.Size = new System.Drawing.Size(104, 56);
             this.trackY.TabIndex = 7;
@@ -107,7 +109,9 @@
             // 
             // trackZ
             // 
-            this.trackZ.Location = new System.Drawing.Point(381, 177);
+            this.trackZ.Location = new System.Drawing.Point(1205, 838);
+            this.trackZ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.trackZ.Maximum = 180;
             this.trackZ.Name = "trackZ";
             this.trackZ.Size = new System.Drawing.Size(104, 56);
             this.trackZ.TabIndex = 8;
@@ -116,7 +120,7 @@
             // lblY
             // 
             this.lblY.AutoSize = true;
-            this.lblY.Location = new System.Drawing.Point(262, 236);
+            this.lblY.Location = new System.Drawing.Point(1149, 731);
             this.lblY.Name = "lblY";
             this.lblY.Size = new System.Drawing.Size(29, 15);
             this.lblY.TabIndex = 9;
@@ -125,7 +129,7 @@
             // lblZ
             // 
             this.lblZ.AutoSize = true;
-            this.lblZ.Location = new System.Drawing.Point(397, 236);
+            this.lblZ.Location = new System.Drawing.Point(1243, 758);
             this.lblZ.Name = "lblZ";
             this.lblZ.Size = new System.Drawing.Size(30, 15);
             this.lblZ.TabIndex = 10;
@@ -133,16 +137,18 @@
             // 
             // picCamera
             // 
-            this.picCamera.Location = new System.Drawing.Point(115, 303);
+            this.picCamera.Location = new System.Drawing.Point(30, 30);
+            this.picCamera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picCamera.Name = "picCamera";
-            this.picCamera.Size = new System.Drawing.Size(370, 274);
+            this.picCamera.Size = new System.Drawing.Size(371, 250);
             this.picCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCamera.TabIndex = 11;
             this.picCamera.TabStop = false;
             // 
             // btnStartVision
             // 
-            this.btnStartVision.Location = new System.Drawing.Point(505, 303);
+            this.btnStartVision.Location = new System.Drawing.Point(30, 297);
+            this.btnStartVision.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStartVision.Name = "btnStartVision";
             this.btnStartVision.Size = new System.Drawing.Size(174, 24);
             this.btnStartVision.TabIndex = 12;
@@ -152,7 +158,8 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(516, 177);
+            this.btnReset.Location = new System.Drawing.Point(30, 706);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(193, 24);
             this.btnReset.TabIndex = 13;
@@ -162,42 +169,49 @@
             // 
             // formsPlot1
             // 
-            this.formsPlot1.Location = new System.Drawing.Point(780, 128);
+            this.formsPlot1.Location = new System.Drawing.Point(428, 30);
+            this.formsPlot1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.formsPlot1.Name = "formsPlot1";
-            this.formsPlot1.Size = new System.Drawing.Size(594, 421);
+            this.formsPlot1.Size = new System.Drawing.Size(381, 250);
             this.formsPlot1.TabIndex = 15;
             // 
             // btnSaveRecipe
             // 
-            this.btnSaveRecipe.Location = new System.Drawing.Point(505, 374);
+            this.btnSaveRecipe.Location = new System.Drawing.Point(323, 706);
+            this.btnSaveRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSaveRecipe.Name = "btnSaveRecipe";
             this.btnSaveRecipe.Size = new System.Drawing.Size(174, 24);
             this.btnSaveRecipe.TabIndex = 16;
             this.btnSaveRecipe.Text = "btnSaveRecipe";
             this.btnSaveRecipe.UseVisualStyleBackColor = true;
+            this.btnSaveRecipe.Click += new System.EventHandler(this.btnSaveRecipe_Click);
             // 
             // btnLoadRecipe
             // 
-            this.btnLoadRecipe.Location = new System.Drawing.Point(505, 439);
+            this.btnLoadRecipe.Location = new System.Drawing.Point(323, 760);
+            this.btnLoadRecipe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoadRecipe.Name = "btnLoadRecipe";
             this.btnLoadRecipe.Size = new System.Drawing.Size(174, 24);
             this.btnLoadRecipe.TabIndex = 17;
             this.btnLoadRecipe.Text = "btnLoadRecipe";
             this.btnLoadRecipe.UseVisualStyleBackColor = true;
+            this.btnLoadRecipe.Click += new System.EventHandler(this.btnLoadRecipe_Click);
             // 
             // txtLog
             // 
-            this.txtLog.Location = new System.Drawing.Point(115, 641);
+            this.txtLog.Location = new System.Drawing.Point(30, 340);
+            this.txtLog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLog.Multiline = true;
             this.txtLog.Name = "txtLog";
             this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtLog.Size = new System.Drawing.Size(594, 295);
+            this.txtLog.Size = new System.Drawing.Size(784, 112);
             this.txtLog.TabIndex = 18;
             // 
             // btnExportCsv
             // 
             this.btnExportCsv.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnExportCsv.Location = new System.Drawing.Point(797, 651);
+            this.btnExportCsv.Location = new System.Drawing.Point(323, 654);
+            this.btnExportCsv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExportCsv.Name = "btnExportCsv";
             this.btnExportCsv.Size = new System.Drawing.Size(174, 24);
             this.btnExportCsv.TabIndex = 19;
@@ -205,11 +219,61 @@
             this.btnExportCsv.UseVisualStyleBackColor = false;
             this.btnExportCsv.Click += new System.EventHandler(this.btnExportCsv_Click);
             // 
+            // lblTemperature
+            // 
+            this.lblTemperature.AutoSize = true;
+            this.lblTemperature.Location = new System.Drawing.Point(27, 476);
+            this.lblTemperature.Name = "lblTemperature";
+            this.lblTemperature.Size = new System.Drawing.Size(100, 15);
+            this.lblTemperature.TabIndex = 20;
+            this.lblTemperature.Text = "lblTemperature";
+            // 
+            // lblLight
+            // 
+            this.lblLight.AutoSize = true;
+            this.lblLight.Location = new System.Drawing.Point(27, 573);
+            this.lblLight.Name = "lblLight";
+            this.lblLight.Size = new System.Drawing.Size(52, 15);
+            this.lblLight.TabIndex = 23;
+            this.lblLight.Text = "lblLight";
+            // 
+            // lblDistance
+            // 
+            this.lblDistance.AutoSize = true;
+            this.lblDistance.Location = new System.Drawing.Point(27, 538);
+            this.lblDistance.Name = "lblDistance";
+            this.lblDistance.Size = new System.Drawing.Size(78, 15);
+            this.lblDistance.TabIndex = 24;
+            this.lblDistance.Text = "lblDistance";
+            // 
+            // lblHumidity
+            // 
+            this.lblHumidity.AutoSize = true;
+            this.lblHumidity.Location = new System.Drawing.Point(27, 508);
+            this.lblHumidity.Name = "lblHumidity";
+            this.lblHumidity.Size = new System.Drawing.Size(76, 15);
+            this.lblHumidity.TabIndex = 25;
+            this.lblHumidity.Text = "lblHumidity";
+            // 
+            // lblSwitchStatus
+            // 
+            this.lblSwitchStatus.AutoSize = true;
+            this.lblSwitchStatus.Location = new System.Drawing.Point(27, 608);
+            this.lblSwitchStatus.Name = "lblSwitchStatus";
+            this.lblSwitchStatus.Size = new System.Drawing.Size(106, 15);
+            this.lblSwitchStatus.TabIndex = 26;
+            this.lblSwitchStatus.Text = "lblSwitchStatus";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1455, 1000);
+            this.ClientSize = new System.Drawing.Size(860, 870);
+            this.Controls.Add(this.lblSwitchStatus);
+            this.Controls.Add(this.lblHumidity);
+            this.Controls.Add(this.lblDistance);
+            this.Controls.Add(this.lblLight);
+            this.Controls.Add(this.lblTemperature);
             this.Controls.Add(this.btnExportCsv);
             this.Controls.Add(this.txtLog);
             this.Controls.Add(this.btnLoadRecipe);
@@ -226,7 +290,7 @@
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.lblX);
             this.Controls.Add(this.trackX);
-            this.Controls.Add(this.cmbPort);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.trackX)).EndInit();
@@ -239,8 +303,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cmbPort;
         private System.Windows.Forms.TrackBar trackX;
         private System.Windows.Forms.Label lblX;
         private System.Windows.Forms.Button btnConnect;
@@ -258,6 +320,11 @@
         private System.Windows.Forms.Button btnLoadRecipe;
         private System.Windows.Forms.TextBox txtLog;
         private System.Windows.Forms.Button btnExportCsv;
+        private System.Windows.Forms.Label lblTemperature;
+        private System.Windows.Forms.Label lblLight;
+        private System.Windows.Forms.Label lblDistance;
+        private System.Windows.Forms.Label lblHumidity;
+        private System.Windows.Forms.Label lblSwitchStatus;
     }
 }
 
